@@ -1,0 +1,25 @@
+{
+  "name": "sdd-reminder-bot",
+  "version": "1.0.0",
+  "description": "Telegram бот для напоминаний о закрытии СДД в Планфиксе",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "pm2:start": "pm2 start src/index.js --name sdd-reminder",
+    "pm2:stop": "pm2 stop sdd-reminder",
+    "pm2:restart": "pm2 restart sdd-reminder",
+    "pm2:logs": "pm2 logs sdd-reminder"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "node-cron": "^3.0.3",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
